@@ -1,0 +1,16 @@
+{
+    "name": "My Codespace with noVNC installed",
+    "build": {
+        "dockerfile": "Dockerfile",
+    },
+    "features": {
+        "desktop-lite": {
+            "password": "vscode",
+            "webPort": "6080",
+            "vncPort": "5901"
+        }
+    },
+    "runArgs": ["--init"],
+    "forwardPorts": [6080, 5901],
+    "overrideCommand": false
+}
