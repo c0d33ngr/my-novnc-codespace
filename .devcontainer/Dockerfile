@@ -1,7 +1,7 @@
 FROM ubuntu:22.04
 COPY library-scripts/desktop-lite-debian.sh /tmp/library-scripts/
 RUN apt-get update && bash /tmp/library-scripts/desktop-lite-debian.sh
-RUN apt-get update && export DEBIAN_FRONTEND=noninteractive && apt-get install -y firefox-esr
+RUN apt-get update && export DEBIAN_FRONTEND=noninteractive && apt-get install -y firefox
 ENV DBUS_SESSION_BUS_ADDRESS="autolaunch:" \
     VNC_RESOLUTION="1440x768x16" \
     VNC_DPI="96" \
