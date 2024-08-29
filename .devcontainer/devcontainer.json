@@ -1,16 +1,17 @@
 {
-    "name": "My Codespace with noVNC installed",
-    "build": {
-        "dockerfile": "Dockerfile",
-    },
+    "image": "mcr.microsoft.com/devcontainers/base:focal", // works with WSL or use `ubuntu:20.4` 
     "features": {
-        "desktop-lite": {
+        "ghcr.io/devcontainers/features/desktop-lite": {
             "password": "vscode",
-            "webPort": "6080",
-            "vncPort": "5901"
+            "webPort": "6080"
         }
     },
-    "runArgs": ["--init"],
-    "forwardPorts": [6080, 5901],
-    "overrideCommand": false
+    "forwardPorts": [
+        6080
+    ],
+    "portsAttributes": {
+        "6080": {
+            "label": "Web VNC"
+        }
+    }
 }
