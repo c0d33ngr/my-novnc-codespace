@@ -4,13 +4,20 @@
         "dockerfile": "Dockerfile",
     },
     "features": {
-        "desktop-lite": {
-            "password": "vscode",
-            "webPort": "6080",
-            "vncPort": "5901"
+        "ghcr.io/devcontainers/features/desktop-lite:1": {}
+    },
+    "init": true,
+    "forwardPorts": [6080],
+    "portsAttributes": {
+        "6080": {
+        "label": "desktop"
         }
     },
-    "runArgs": ["--init"],
-    "forwardPorts": [6080, 5901],
-    "overrideCommand": false
+    "entrypoint": "/usr/local/share/desktop-init.sh",
+    "containerEnv": {
+        "DISPLAY": ":1"
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ]
 }
