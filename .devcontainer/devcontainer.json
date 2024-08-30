@@ -1,23 +1,9 @@
 {
-    "name": "My Codespace with noVNC installed",
+    "name": "My Codespace with noVNC installed based on Accetto",
     "build": {
-        "dockerfile": "Dockerfile",
+        "dockerfile": "Dockerfile"
     },
     "features": {
-        "ghcr.io/devcontainers/features/desktop-lite:1": {}
-    },
-    "init": true,
-    "forwardPorts": [6080],
-    "portsAttributes": {
-        "6080": {
-        "label": "desktop"
-        }
-    },
-    "entrypoint": "/usr/local/share/desktop-init.sh",
-    "containerEnv": {
-        "DISPLAY": ":1"
-    },
-    "installsAfter": [
-        "ghcr.io/devcontainers/features/common-utils"
-    ]
+        "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+    }   
 }
