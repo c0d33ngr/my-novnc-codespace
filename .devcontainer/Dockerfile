@@ -1,2 +1,3 @@
-FROM ubuntu:22.04
-RUN apt-get update && export DEBIAN_FRONTEND=noninteractive && apt-get install -y firefox-esr
+FROM accetto/debian-vnc-xfce-vscode-g3
+RUN apt-get update -y
+RUN apt-get upgrade -y
