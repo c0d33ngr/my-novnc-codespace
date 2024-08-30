@@ -1,7 +1,7 @@
 {
     "name": "My Codespace with noVNC installed",
     "build": {
-        "docker": "Dockerfile"
+        "dockerfile": "Dockerfile"
     },
     /* "image": "mcr.microsoft.com/devcontainers/base:focal", // works with WSL or use `ubuntu:20.4` */
     "features": {
