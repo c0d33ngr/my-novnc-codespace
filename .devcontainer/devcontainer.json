@@ -1,5 +1,9 @@
 {
-    "image": "mcr.microsoft.com/devcontainers/base:focal", // works with WSL or use `ubuntu:20.4` 
+    "name": "My Codespace with noVNC",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    /* "image": "mcr.microsoft.com/devcontainers/base:focal", // works with WSL or use `ubuntu:20.4` */
     "features": {
         "ghcr.io/devcontainers/features/desktop-lite": {
             "password": "vscode",
